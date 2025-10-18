@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+
+    <!-- 样式 -->
+    <link rel="stylesheet" href="{{ "css/style.css" | relURL }}" />
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" />
+    <link id="dark-mode-style" rel="stylesheet" href="{{ "css/dark.css" | relURL }}" disabled>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- KaTeX 数学公式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      renderMathInElement(document.body, {
+        delimiters: [
+          { left: "$$", right: "$$", display: true },
+          { left: "\\[", right: "\\]", display: true },
+          { left: "$", right: "$", display: false }
+        ],
+        throwOnError: false
+      });
+
+      // 强制修正块级公式的显示样式
+      document.querySelectorAll('.katex-display').forEach(el => {
+        el.style.display = 'block';
+        el.style.textAlign = 'center';
+        el.style.margin = '1em 0';
+      });
+    });
+    </script>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p7c8R1bV2qM3Q1fUqxH9n6OSbRj7OcYd3wZ8A6p1XQlPjaJw/YP3k1ZpFZ/V1r6Bf+W0jDQkjO2KZHT+JbR3Kw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Dark Mode JS -->
+    <script src="{{ "js/dark-mode.js" | relURL }}" defer></script>
+
+  </head>
+
+  <body>
+    <!-- 导航栏 -->
+    <nav>
+      <ul class="menu">
+        {{ range .Site.Menus.main }}
+          <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      <hr/>
+    </nav>

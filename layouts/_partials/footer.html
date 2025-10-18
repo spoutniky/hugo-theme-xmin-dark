@@ -1,0 +1,16 @@
+<footer>
+
+
+  <!-- 版权信息 -->
+  {{ with .Site.Params.footer }}
+    <hr/>
+    <p style="text-align:center;">
+      {{ replace . "{Year}" now.Year | markdownify }}
+    </p>
+  {{ end }}
+</footer>
+
+<!-- Dark Mode JS -->
+<script src="{{ "js/dark-mode.js" | relURL }}"></script>
+</body>
+</html>
