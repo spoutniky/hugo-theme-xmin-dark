@@ -1,28 +1,17 @@
-# HUGO XMIN
+# Hugo Theme: XMin-Dark
 
-## _Keep it simple, but not simpler_
+This is a modified fork of [hugo-theme-xmin](https://github.com/yihui/hugo-xmin) originally created by [Yihui Xie](https://github.com/yihui).
 
-**XMin** is a Hugo theme written by [Yihui Xie](https://yihui.org) in about four hours: half an hour was spent on the Hugo templates, and 3.5 hours were spent on styling. The main motivation for writing this theme was to provide a really minimal example to beginners of Hugo templates. This XMin theme contains about 140 lines of code in total, including the code in HTML templates and CSS (also counting empty lines).
+The primary goal of this fork is to add a persistent, toggleable **Dark Mode** feature while keeping the original theme's simplicity and minimalism.
 
+## Key Changes
 
-``` bash
-find . -not -path '*/exampleSite/*' \( -name '*.html' -o -name '*.css' \) | xargs wc -l
-```
+* **Dark Mode Toggle:** A floating button (using Font Awesome) allows users to switch between light and dark themes.
+* All original features of `xmin` are retained.
 
-```
-      12 ./layouts/single.html
-      20 ./layouts/list.html
-      13 ./layouts/terms.html
-       5 ./layouts/404.html
-       0 ./layouts/_partials/foot_custom.html
-       0 ./layouts/_partials/head_custom.html
-       9 ./layouts/_partials/footer.html
-      20 ./layouts/_partials/header.html
-      51 ./static/css/style.css
-       7 ./static/css/fonts.css
-     137 total
-```
+## Installation
 
-I can certainly further reduce the code, for example, by eliminating the CSS, but I believe a tiny bit of CSS can greatly improve readability. You cannot really find many CSS frameworks that only contain 50 lines of code.
+Inside your Hugo site's directory, run:
 
-[![Screenshot](https://github.com/yihui/hugo-xmin/raw/master/images/screenshot.png)](https://xmin.yihui.org)
+```bash
+git submodule add [https://github.com/spoutniky/hugo-theme-xmin-dark.git](https://github.com/spoutniky/hugo-theme-xmin-dark.git) themes/xmin-dark
