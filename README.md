@@ -14,4 +14,4 @@ The primary goal of this fork is to add a persistent, toggleable **Dark Mode** f
 Inside your Hugo site's directory, run:
 
 ```bash
-git submodule add [https://github.com/spoutniky/hugo-theme-xmin-dark.git](https://github.com/spoutniky/hugo-theme-xmin-dark.git) themes/xmin-dark
+git submodule add [https://github.com/tientsinssu/hugo-theme-xmin-dark.git](https://github.com/tientsinssu/hugo-theme-xmin-dark.git) themes/xmin-dark
